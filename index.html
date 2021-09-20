@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Kalkulator Javascript</title>
+
+	<style type="text/css">
+		h1
+		{
+			font-family: monospace; letter-spacing: 5px; color: maroon;
+		}
+		p 
+		{
+			font-family: sans-serif; color: palevioletred; letter-spacing: 1px;
+		}
+		h3
+		{
+			font-family: monospace; letter-spacing: 5px; color: maroon; font-size: 30px; text-align: center;
+		}
+		
+
+	</style>
+
+
+	<script type="text/javascript">
+		
+		function calc()
+		{
+			var number1=parseFloat(document.getElementById('number1').value);
+			var number2=parseFloat(document.getElementById('number2').value);
+			var opera=document.getElementById('operator').value;
+
+			if(opera ==='+')
+			{
+				document.getElementById('answer').value=number1+number2;
+			}
+
+			if(opera==='-')
+			{
+				document.getElementById('answer').value=number1-number2;
+			}
+
+			if(opera==='*')
+			{
+				document.getElementById('answer').value=number1*number2;
+			}
+
+			if(opera==='/')
+			{
+				document.getElementById('answer').value=number1/number2;
+			}
+
+		}
+
+
+	</script>
+</head>
+<body bgcolor="wheat">
+	<h1>Javascript Calculator</h1>
+	<p>Value 1</p>
+	<input type="text" id="number1"><br>
+	<p>Value 2</p>
+	<input type="text" id="number2"><br>
+
+	<p>Operators</p>
+	<select id="operator">
+		<option value="+">+</option>
+		<option value="-">-</option>
+		<option value="*">*</option>
+		<option value="/">/</option>
+	</select>
+
+	<button onclick="calc();">=</button>
+
+	<p>Hasil</p>
+	<input type="text" id="answer">
+
+	<br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<h3>Website by : Nicholas Salim</h3>
+
+
+
+</body>
+</html>
